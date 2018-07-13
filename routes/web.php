@@ -37,3 +37,9 @@ Route::post('password/reset', 'Auth\ForgPasswordController@reset');
 
 // 已有主页，不需要
 // Route::get('/home', 'HomeController@index')->name('home');
+
+// Route::resource('users', 'UsersController', ['only'] => ['show', 'update', 'edit']);
+// 等价于
+Route::get('/users/{user}', 'UsersController@show')->name('users.show');
+Route::get('/users/{user}/edit', 'UsersController@edit')->name('users.edit');
+Route::patch('users/{user}', 'UsersController@update')->name('users.update');
