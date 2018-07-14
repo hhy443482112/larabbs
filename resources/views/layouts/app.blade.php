@@ -21,13 +21,14 @@
 
         <div class="container">
 
+            @include('layouts._message')
             @yield('content')
-        
+
         </div>
 
         @include('layouts._footer')
-    </div>  
-    
+    </div>
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
